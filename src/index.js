@@ -21,7 +21,7 @@ const providerConfig = {
   domain: config.domain,
   clientId: config.clientId,
   ...(config.audience ? { audience: config.audience } : null),
-  redirectUri: "https://thegagali.com/dashboard",
+  redirectUri: window.location.origin,
   onRedirectCallback,
 }
 
