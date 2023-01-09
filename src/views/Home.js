@@ -14,7 +14,13 @@ const Home = () => {
       </Fragment>
     )
   }
-  return <h2>logged in</h2>
+  return (
+    <Fragment>
+      <hr />
+      <p>Logged in!</p>
+      <h3>See the dashboard for existing pages or create a new page</h3>
+    </Fragment>
+  )
 }
 
 export default Home
