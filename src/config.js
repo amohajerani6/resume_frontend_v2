@@ -1,4 +1,4 @@
-import configJson from "./auth_config.json";
+import configJson from "./auth_config.json"
 
 export function getConfig() {
   // Configure the audience here. By default, it will take whatever is in the config
@@ -9,12 +9,12 @@ export function getConfig() {
   // with the audience.
   const audience =
     configJson.audience && configJson.audience !== "YOUR_API_IDENTIFIER"
-      ? configJson.audience
-      : null;
+      ? process.env.audience
+      : null
 
   return {
-    domain: configJson.domain,
-    clientId: configJson.clientId,
+    domain: process.env.domain,
+    clientId: process.env.clientId,
     ...(audience ? { audience } : null),
-  };
+  }
 }
