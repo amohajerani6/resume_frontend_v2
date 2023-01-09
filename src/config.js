@@ -1,3 +1,5 @@
+import configJson from "./auth_config.json"
+console.log("check thissssssss: ", process.env.REACT_APP_domain)
 export function getConfig() {
   // Configure the audience here. By default, it will take whatever is in the config
   // (specified by the `audience` key) unless it's the default value of "YOUR_API_IDENTIFIER" (which
@@ -6,13 +8,14 @@ export function getConfig() {
   // If this resolves to `null`, the API page changes to show some helpful info about what to do
   // with the audience.
   const audience =
-    process.env.audience && process.env.audience !== "YOUR_API_IDENTIFIER"
-      ? process.env.audience
+    process.env.REACT_APP_audience &&
+    process.env.REACT_APP_audience !== "YOUR_API_IDENTIFIER"
+      ? process.env.REACT_APP_audience
       : null
 
   return {
-    domain: process.env.domain,
-    clientId: process.env.clientId,
+    domain: process.env.REACT_APP_domain,
+    clientId: process.env.REACT_APP_clientId,
     ...(audience ? { audience } : null),
   }
 }
