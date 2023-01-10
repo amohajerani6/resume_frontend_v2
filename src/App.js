@@ -7,7 +7,6 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import Home from "./views/Home"
 import Profile from "./views/Profile"
-import Dashboard from "./views/Dashboard"
 import ExternalApi from "./views/ExternalApi"
 import Newpage from "./views/Newpage"
 import ViewPage from "./views/ViewPage"
@@ -44,7 +43,6 @@ const App = () => {
             <Route path="/view/:page" component={ViewPage} />
             <Route path="/" exact component={Home} />
             <Route path="/profile" component={Profile} />
-            <Route path="/dashboard" component={Dashboard} />
             <Route path="/new-page" component={Newpage} />
             <Route path="/external-api" component={ExternalApi} />
             <Route path="/dash/:page" component={DashPage} />
