@@ -39,7 +39,7 @@ const NavBar = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                {!isAuthenticated && (
+                {
                   <NavLink
                     tag={RouterNavLink}
                     to="/"
@@ -48,21 +48,8 @@ const NavBar = () => {
                   >
                     Home
                   </NavLink>
-                )}
+                }
               </NavItem>
-
-              {isAuthenticated && (
-                <NavItem>
-                  <NavLink
-                    tag={RouterNavLink}
-                    to="/dashboard"
-                    exact
-                    activeClassName="router-link-exact-active"
-                  >
-                    Dashboard
-                  </NavLink>
-                </NavItem>
-              )}
 
               {isAuthenticated && (
                 <NavItem>
