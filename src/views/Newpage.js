@@ -30,7 +30,7 @@ function NewPage() {
       })
       .then(function (response) {
         if (response.data.created) {
-          history.push("/dashboard")
+          history.push("/")
         } else {
           alert("try again")
         }
