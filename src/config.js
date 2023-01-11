@@ -1,4 +1,3 @@
-//import configJson from "./auth_config.json"
 console.log("check thissssssss: ", process.env.REACT_APP_domain)
 export function getConfig() {
   // Configure the audience here. By default, it will take whatever is in the config
