@@ -9,7 +9,7 @@ import Home from "./views/Home"
 import Profile from "./views/Profile"
 import Newpage from "./views/Newpage"
 import ViewPage from "./views/ViewPage"
-import Missing from "./views/Missing"
+import PingAPI from "./views/PingAPI"
 import { useAuth0 } from "@auth0/auth0-react"
 import history from "./utils/history"
 
@@ -38,9 +38,9 @@ const App = () => {
         {!window.location.pathname.startsWith("/view/") ? <NavBar /> : <></>}
         <Container className="flex-grow-1 mt-5">
           <Switch>
-            <Route path="/missing" component={Missing} />
             <Route path="/view/:page" component={ViewPage} />
             <Route path="/" exact component={Home} />
+            <Route path="/ping" exact component={PingAPI} />
             <Route path="/profile" component={Profile} />
             <Route path="/new-page" component={Newpage} />
             <Route path="/dash/:page" component={DashPage} />
