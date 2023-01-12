@@ -7,7 +7,7 @@ function ViewPage() {
     <div>
       <iframe
         src={
-          "https://epe5gfqw17.execute-api.us-east-1.amazonaws.com/view/" +
+          "https://3wqz33ka05.execute-api.us-east-1.amazonaws.com/view/" +
           page +
           "#view=fitH"
         }
