@@ -13,6 +13,7 @@ function Dashboard() {
     async function fetchData() {
       try {
         const accessToken = await getAccessTokenSilently()
+        console.log("accessToken: ", accessToken)
         const res = await axios.get("/pages", {
           headers: { authorization: "Bearer " + accessToken },
         })

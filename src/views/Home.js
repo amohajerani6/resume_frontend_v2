@@ -6,7 +6,6 @@ import Pages from "../components/Pages"
 
 const Home = () => {
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0()
-
   if (!isAuthenticated) {
     return (
       <Fragment>
