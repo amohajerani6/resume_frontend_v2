@@ -1,4 +1,3 @@
-console.log("check thissssssss: ", process.env.REACT_APP_domain)
 export function getConfig() {
   // Configure the audience here. By default, it will take whatever is in the config
   // (specified by the `audience` key) unless it's the default value of "YOUR_API_IDENTIFIER" (which
