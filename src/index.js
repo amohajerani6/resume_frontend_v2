@@ -20,18 +20,13 @@ const config = getConfig()
 const providerConfig = {
   domain: config.domain,
   clientId: config.clientId,
+  ...(config.audience ? { audience: config.audience } : null),
   redirectUri: window.location.origin,
   onRedirectCallback,
 }
 
 ReactDOM.render(
-  <Auth0Provider
-    domain="dev-xy0rbu4evnjwlphn.us.auth0.com"
-    clientId="EnTQMw6jHpxGeSYL5yl0jYZvgAxZ6at4"
-    redirectUri={window.location.origin}
-    audience="https://dev-xy0rbu4evnjwlphn.us.auth0.com/api/v2/"
-    scope="read:current_user update:current_user_metadata"
-  >
+  <Auth0Provider {...providerConfig}>
     <App />
   </Auth0Provider>,
   document.getElementById("root")
