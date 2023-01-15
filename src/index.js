@@ -25,7 +25,13 @@ const providerConfig = {
 }
 
 ReactDOM.render(
-  <Auth0Provider {...providerConfig}>
+  <Auth0Provider
+    domain="dev-xy0rbu4evnjwlphn.us.auth0.com"
+    clientId="EnTQMw6jHpxGeSYL5yl0jYZvgAxZ6at4"
+    redirectUri={window.location.origin}
+    audience="https://dev-xy0rbu4evnjwlphn.us.auth0.com/api/v2/"
+    scope="read:current_user update:current_user_metadata"
+  >
     <App />
   </Auth0Provider>,
   document.getElementById("root")
